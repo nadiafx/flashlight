@@ -56,7 +56,7 @@ public class FlashLightActivity extends Activity {
         //Instantiate camera and get the parameters
         mCamera = Camera.open();
         if (mCamera == null) {
-            Toast.makeText(getApplicationContext(), "No camera found", Toast.LENGTH_SHORT);
+            Toast.makeText(getApplicationContext(), "No camera found", Toast.LENGTH_SHORT).show();
             return;
         }
         final Parameters cameraParams = mCamera.getParameters();
