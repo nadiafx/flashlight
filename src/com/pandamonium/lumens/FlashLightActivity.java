@@ -14,6 +14,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class FlashLightActivity extends Activity {
 
@@ -54,6 +55,10 @@ public class FlashLightActivity extends Activity {
 
         //Instantiate camera and get the parameters
         mCamera = Camera.open();
+        if (mCamera == null) {
+            Toast.makeText(getApplicationContext(), "No camera found", Toast.LENGTH_SHORT);
+            return;
+        }
         final Parameters cameraParams = mCamera.getParameters();
 
         //Set up primary switch
