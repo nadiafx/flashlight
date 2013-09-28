@@ -36,7 +36,6 @@ public class FlashLightActivity extends Activity {
         //Set window features, no title, full screen, hidden nav
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        this.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
         //Set view
         setContentView(R.layout.main);
@@ -104,6 +103,7 @@ public class FlashLightActivity extends Activity {
         mCamera.setParameters(cameraParams);
         mCamera.startPreview();
         mIsLightOn = true;
+        mPrimarySwitch.setBackgroundResource(R.drawable.circle_button_active);
     }
 
     /**
@@ -116,5 +116,6 @@ public class FlashLightActivity extends Activity {
         mCamera.setParameters(cameraParams);
         mCamera.stopPreview();
         mIsLightOn = false;
+        mPrimarySwitch.setBackgroundResource(R.drawable.circle_button);
     }
 }

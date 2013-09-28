@@ -4,7 +4,7 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="11" />
+    <uses-sdk android:minSdkVersion="13" />
 
    <!--  <permission
         android:name="android.permission.FLASHLIGHT"
@@ -13,11 +13,13 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" />
+    
+    <!-- android:theme="@android:style/Theme.Holo.Light.NoActionBar" -->
 
     <application
         android:debuggable="true"
         android:icon="@drawable/ic_launcher"
-        android:theme="@android:style/Theme.Holo.NoActionBar"
+        android:theme="@android:style/Theme.Holo.Wallpaper.NoTitleBar"
         android:label="@string/app_name" >
         <activity
             android:label="@string/app_name"

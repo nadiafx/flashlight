@@ -4,12 +4,21 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-    <Button
-        android:id="@+id/buttonFlashlight"
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-       	android:layout_centerVertical="true"
-       	android:layout_centerHorizontal="true"
-        android:text="Torch" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layoutAnimation="@anim/rocking_float_cycle_anim" >
+
+        <Button
+            android:id="@+id/buttonFlashlight"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:background="@drawable/circle_button" />
+    </FrameLayout>
 
 </RelativeLayout>
